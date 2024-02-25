@@ -374,7 +374,7 @@ The following parameters are available in the `bareos::client` class:
 
 ##### <a name="-bareos--client--manage_service"></a>`manage_service`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -382,7 +382,7 @@ Default value: `$bareos::manage_service`
 
 ##### <a name="-bareos--client--manage_package"></a>`manage_package`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -390,7 +390,7 @@ Default value: `$bareos::manage_package`
 
 ##### <a name="-bareos--client--package_name"></a>`package_name`
 
-Data type: `Any`
+Data type: `Array[String[1]]`
 
 
 
@@ -398,7 +398,7 @@ Default value: `$bareos::client_package_name`
 
 ##### <a name="-bareos--client--package_ensure"></a>`package_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -406,7 +406,7 @@ Default value: `$bareos::package_ensure`
 
 ##### <a name="-bareos--client--service_name"></a>`service_name`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -414,7 +414,7 @@ Default value: `$bareos::client_service_name`
 
 ##### <a name="-bareos--client--service_ensure"></a>`service_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -422,7 +422,7 @@ Default value: `$bareos::service_ensure`
 
 ##### <a name="-bareos--client--service_enable"></a>`service_enable`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -430,7 +430,7 @@ Default value: `$bareos::service_enable`
 
 ##### <a name="-bareos--client--config_dir"></a>`config_dir`
 
-Data type: `Any`
+Data type: `Stdlib::Absolutepath`
 
 
 
@@ -1073,7 +1073,7 @@ The following parameters are available in the `bareos::console` class:
 
 ##### <a name="-bareos--console--manage_package"></a>`manage_package`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1081,7 +1081,7 @@ Default value: `$bareos::manage_package`
 
 ##### <a name="-bareos--console--package_name"></a>`package_name`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -1089,7 +1089,7 @@ Default value: `$bareos::console_package_name`
 
 ##### <a name="-bareos--console--package_ensure"></a>`package_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -1097,7 +1097,7 @@ Default value: `$bareos::package_ensure`
 
 ##### <a name="-bareos--console--config_dir"></a>`config_dir`
 
-Data type: `Any`
+Data type: `Stdlib::Absolutepath`
 
 
 
@@ -1138,7 +1138,7 @@ The following parameters are available in the `bareos::director` class:
 
 ##### <a name="-bareos--director--manage_service"></a>`manage_service`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1146,7 +1146,7 @@ Default value: `$bareos::manage_service`
 
 ##### <a name="-bareos--director--manage_package"></a>`manage_package`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1154,7 +1154,7 @@ Default value: `$bareos::manage_package`
 
 ##### <a name="-bareos--director--manage_database"></a>`manage_database`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1162,7 +1162,7 @@ Default value: `$bareos::manage_database`
 
 ##### <a name="-bareos--director--package_name"></a>`package_name`
 
-Data type: `Any`
+Data type: `Array[String[1]]`
 
 
 
@@ -1170,7 +1170,7 @@ Default value: `$bareos::director_package_name`
 
 ##### <a name="-bareos--director--package_ensure"></a>`package_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -1178,7 +1178,7 @@ Default value: `$bareos::package_ensure`
 
 ##### <a name="-bareos--director--service_name"></a>`service_name`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -1186,7 +1186,7 @@ Default value: `$bareos::director_service_name`
 
 ##### <a name="-bareos--director--service_allow_restart"></a>`service_allow_restart`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1194,7 +1194,7 @@ Default value: `$bareos::director_service_allow_restart`
 
 ##### <a name="-bareos--director--service_ensure"></a>`service_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -1202,7 +1202,7 @@ Default value: `$bareos::service_ensure`
 
 ##### <a name="-bareos--director--service_enable"></a>`service_enable`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1210,7 +1210,7 @@ Default value: `$bareos::service_enable`
 
 ##### <a name="-bareos--director--config_dir"></a>`config_dir`
 
-Data type: `Any`
+Data type: `Stdlib::Absolutepath`
 
 
 
@@ -1982,7 +1982,7 @@ The following parameters are available in the `bareos::monitor` class:
 
 ##### <a name="-bareos--monitor--manage_package"></a>`manage_package`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -1990,7 +1990,7 @@ Default value: `$bareos::manage_package`
 
 ##### <a name="-bareos--monitor--package_name"></a>`package_name`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -1998,7 +1998,7 @@ Default value: `$bareos::monitor_package_name`
 
 ##### <a name="-bareos--monitor--package_ensure"></a>`package_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -2006,7 +2006,7 @@ Default value: `$bareos::package_ensure`
 
 ##### <a name="-bareos--monitor--config_dir"></a>`config_dir`
 
-Data type: `Any`
+Data type: `Stdlib::Absolutepath`
 
 
 
@@ -2306,7 +2306,7 @@ The following parameters are available in the `bareos::storage` class:
 
 ##### <a name="-bareos--storage--manage_service"></a>`manage_service`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -2314,7 +2314,7 @@ Default value: `$bareos::manage_service`
 
 ##### <a name="-bareos--storage--manage_package"></a>`manage_package`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -2322,7 +2322,7 @@ Default value: `$bareos::manage_package`
 
 ##### <a name="-bareos--storage--package_name"></a>`package_name`
 
-Data type: `Any`
+Data type: `Array[String[1]]`
 
 
 
@@ -2330,7 +2330,7 @@ Default value: `$bareos::storage_package_name`
 
 ##### <a name="-bareos--storage--package_ensure"></a>`package_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -2338,7 +2338,7 @@ Default value: `$bareos::package_ensure`
 
 ##### <a name="-bareos--storage--service_name"></a>`service_name`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -2346,7 +2346,7 @@ Default value: `$bareos::storage_service_name`
 
 ##### <a name="-bareos--storage--service_ensure"></a>`service_ensure`
 
-Data type: `Any`
+Data type: `String[1]`
 
 
 
@@ -2354,7 +2354,7 @@ Default value: `$bareos::service_ensure`
 
 ##### <a name="-bareos--storage--service_enable"></a>`service_enable`
 
-Data type: `Any`
+Data type: `Boolean`
 
 
 
@@ -2362,7 +2362,7 @@ Default value: `$bareos::service_enable`
 
 ##### <a name="-bareos--storage--config_dir"></a>`config_dir`
 
-Data type: `Any`
+Data type: `Stdlib::Absolutepath`
 
 
 
