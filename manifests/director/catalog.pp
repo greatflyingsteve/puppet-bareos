@@ -1,8 +1,11 @@
-# @summary
-#   To define in what database to keep the list of files and the Volume names where they are backed up. Most people only use a single catalog. It is possible, however not adviced and not supported to use multiple catalogs.
+# @summary Manage the Director's Catalog definition
+#
+#   Define the database to keep the Catalog data in (the list of files and the Volume names where
+#   they are backed up). Most people only use a single catalog. It is possible (however not advised
+#   or supported) to use multiple catalogs.
 #
 # @param ensure
-#   present or absent the config file.
+#   Whether the config file should be present or absent.
 #
 # @param db_address
 #   Db Address
