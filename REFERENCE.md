@@ -4359,10 +4359,10 @@ Bareos Datatype: string
 Bareos Default: postgresql
 Required: false
 
-This parameter is deprecated. The only valid value under bareos >= 21 is
-`postgresql`.
+This parameter was deprecated in Bareos 21; the only valid value in versions 21 and 22 was
+`postgresql`, and starting in version 23, the Director no longer starts if it's present.
 
-See https://docs.bareos.org/Configuration/Director.html#config-Dir_Catalog_DbDriver
+See https://docs.bareos.org/bareos-22/Configuration/Director.html#config-Dir_Catalog_DbDriver
 
 Default value: `undef`
 
