@@ -7,9 +7,9 @@
 # @param repo_subscription
 #   Activate the (paid) subscription repo. Otherwise the opensource repos will be selected
 # @param repo_username
-#   The major bareos release version which should be used
+#   The username is required for accessing subscription content
 # @param repo_password
-#   The major bareos release version which should be used
+#   The password is required for accessing subscription content
 # @param manage_package
 #   Whether puppet should handle the installation ob bareos packages
 # @param manage_service

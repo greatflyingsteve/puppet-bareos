@@ -136,7 +136,7 @@ Default value: `false`
 
 Data type: `Optional[String[1]]`
 
-The major bareos release version which should be used
+The username is required for accessing subscription content
 
 Default value: `undef`
 
@@ -144,7 +144,7 @@ Default value: `undef`
 
 Data type: `Optional[String[1]]`
 
-The major bareos release version which should be used
+The password is required for accessing subscription content
 
 Default value: `undef`
 
@@ -2262,7 +2262,7 @@ Default value: `false`
 
 Data type: `Optional[String]`
 
-The major bareos release version which should be used
+The username is required for accessing subscription content
 
 Default value: `undef`
 
@@ -2270,7 +2270,7 @@ Default value: `undef`
 
 Data type: `Optional[String]`
 
-The major bareos release version which should be used
+The password is required for accessing subscription content
 
 Default value: `undef`
 
