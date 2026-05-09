@@ -53,6 +53,7 @@ Almost the same like `Job`.
 * [`bareos::director::schedule`](#bareos--director--schedule): Provides a means of automatically scheduling a job as well as the ability to override the default level, pool, storage and messages resources. If a schedule resource is not referenced in a job, the jjob can only be run manually. In general, you specify an action to be taken and when.
 * [`bareos::director::storage`](#bareos--director--storage): To define on what physical device the Volumes should be mounted.
 You may have one or more Storage definitions.
+* [`bareos::director::user`](#bareos--director--user): Configure a **PAM-authenticated Console User**.
 * [`bareos::monitor::client`](#bareos--monitor--client): The Client resource defines the attributes of the Clients that are monitored by this Monitor.
 * [`bareos::monitor::director`](#bareos--monitor--director): The Director resource defines the attributes of the Directors that are monitored by this Monitor.
 * [`bareos::monitor::monitor`](#bareos--monitor--monitor): The Monitor resource defines the attributes of the Monitor running on the network. 0The parameters you define here must be configured as a Director resource in Clients and Storages configuration files, and as a Console resource in Directors configuration files.
@@ -9130,6 +9131,181 @@ Data type: `Any`
 Username
 
 Bareos Datatype: string
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+### <a name="bareos--director--user"></a>`bareos::director::user`
+
+Configure a **PAM-authenticated Console User**.
+
+#### Parameters
+
+The following parameters are available in the `bareos::director::user` defined type:
+
+* [`ensure`](#-bareos--director--user--ensure)
+* [`catalog_acl`](#-bareos--director--user--catalog_acl)
+* [`client_acl`](#-bareos--director--user--client_acl)
+* [`command_acl`](#-bareos--director--user--command_acl)
+* [`description`](#-bareos--director--user--description)
+* [`file_set_acl`](#-bareos--director--user--file_set_acl)
+* [`job_acl`](#-bareos--director--user--job_acl)
+* [`plugin_options_acl`](#-bareos--director--user--plugin_options_acl)
+* [`pool_acl`](#-bareos--director--user--pool_acl)
+* [`profile`](#-bareos--director--user--profile)
+* [`schedule_acl`](#-bareos--director--user--schedule_acl)
+* [`storage_acl`](#-bareos--director--user--storage_acl)
+* [`where_acl`](#-bareos--director--user--where_acl)
+
+##### <a name="-bareos--director--user--ensure"></a>`ensure`
+
+Data type: `Enum['present', 'absent']`
+
+Whether the config file should be present or absent.
+
+Default value: `present`
+
+##### <a name="-bareos--director--user--catalog_acl"></a>`catalog_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Catalog ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--client_acl"></a>`client_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Client ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--command_acl"></a>`command_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Command ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--description"></a>`description`
+
+Data type: `Optional[String]`
+
+Description
+
+Bareos Datatype: string
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--file_set_acl"></a>`file_set_acl`
+
+Data type: `Optional[Bareos::List]`
+
+File Set ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--job_acl"></a>`job_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Job ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--plugin_options_acl"></a>`plugin_options_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Plugin Options ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--pool_acl"></a>`pool_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Pool ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--profile"></a>`profile`
+
+Data type: `Optional[Bareos::List]`
+
+Profile: Profiles can be assigned to a Console. ACL are checked until either a deny ACL is found or an allow ACL. First the console ACL is checked then any profile the console is linked to.
+
+May be specified as Array.
+Bareos Datatype: resource_list
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--schedule_acl"></a>`schedule_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Schedule ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--storage_acl"></a>`storage_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Storage ACL
+
+Bareos Datatype: acl
+Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--user--where_acl"></a>`where_acl`
+
+Data type: `Optional[Bareos::List]`
+
+Where ACL
+
+Bareos Datatype: acl
 Bareos Default: Not set
 Required: false
 

@@ -24,7 +24,8 @@ class bareos::params {
     'bareos-database-tools',
   ]
   $director_service_name = 'bareos-dir'
-  $director_managed_dirs = ['catalog',
+  $director_managed_dirs = [
+    'catalog',
     'client',
     'console',
     'counter',
@@ -37,6 +38,7 @@ class bareos::params {
     'profile',
     'schedule',
     'storage',
+    'user',
   ]
 
   # filedaemon/client
