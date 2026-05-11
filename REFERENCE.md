@@ -5675,6 +5675,7 @@ The following parameters are available in the `bareos::director::job` defined ty
 * [`run_after_failed_job`](#-bareos--director--job--run_after_failed_job)
 * [`run_after_job`](#-bareos--director--job--run_after_job)
 * [`run_before_job`](#-bareos--director--job--run_before_job)
+* [`run_on_incoming_connect_interval`](#-bareos--director--job--run_on_incoming_connect_interval)
 * [`run_script`](#-bareos--director--job--run_script)
 * [`save_file_history`](#-bareos--director--job--save_file_history)
 * [`schedule_res`](#-bareos--director--job--schedule_res)
@@ -6508,6 +6509,18 @@ Required: false
 
 Default value: `undef`
 
+##### <a name="-bareos--director--job--run_on_incoming_connect_interval"></a>`run_on_incoming_connect_interval`
+
+Data type: `Any`
+
+Run On Incoming Connect Interval
+
+Bareos Datatype: time
+Bareos Default: 0
+Required: false
+
+Default value: `undef`
+
 ##### <a name="-bareos--director--job--run_script"></a>`run_script`
 
 Data type: `Any`
@@ -6779,6 +6792,7 @@ The following parameters are available in the `bareos::director::jobdefs` define
 * [`run_after_failed_job`](#-bareos--director--jobdefs--run_after_failed_job)
 * [`run_after_job`](#-bareos--director--jobdefs--run_after_job)
 * [`run_before_job`](#-bareos--director--jobdefs--run_before_job)
+* [`run_on_incoming_connect_interval`](#-bareos--director--jobdefs--run_on_incoming_connect_interval)
 * [`run_script`](#-bareos--director--jobdefs--run_script)
 * [`save_file_history`](#-bareos--director--jobdefs--save_file_history)
 * [`schedule_res`](#-bareos--director--jobdefs--schedule_res)
@@ -7608,6 +7622,18 @@ Run Before Job
 
 Bareos Datatype: runscript_short
 Bareos Default: Not set
+Required: false
+
+Default value: `undef`
+
+##### <a name="-bareos--director--jobdefs--run_on_incoming_connect_interval"></a>`run_on_incoming_connect_interval`
+
+Data type: `Any`
+
+Run On Incoming Connect Interval
+
+Bareos Datatype: time
+Bareos Default: 0
 Required: false
 
 Default value: `undef`
