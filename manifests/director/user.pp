@@ -109,10 +109,6 @@ define bareos::director::user (
   $_resource = 'User'
   $_resource_dir = 'user'
 
-  unless $ensure in ['present', 'absent'] {
-    fail('Invalid value for ensure')
-  }
-
   if $ensure == 'present' {
     $_require_res_profiles = $profile ? { undef => undef, default => Bareos::Director::Profile[$profile] }
 
