@@ -1,4 +1,4 @@
-# @summary 
+# @summary
 #   Configure an **Named Console** aka **Restricted Console**. Both the names and the passwords in these two entries must match much as is the case for Client programs.
 #
 # @param ensure
@@ -228,10 +228,6 @@ define bareos::director::console (
 
   $_resource = 'Console'
   $_resource_dir = 'console'
-
-  unless $ensure in ['present', 'absent'] {
-    fail('Invalid value for ensure')
-  }
 
   if $ensure == 'present' {
     $_require_res_profiles = $profile ? { undef => undef, default => Bareos::Director::Profile[$profile] }
