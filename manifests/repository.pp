@@ -36,10 +36,14 @@ class bareos::repository (
     $url = 'https://download.bareos.org/current/'
   }
 
-  # We claim to support Amazon Linux 2, which behaves like RHEL 7.  If we encounter versions of
-  # Amazon Linux other than 2, where we can't just pretend it's RHEL 7, BareOS does not offer
-  # repository support, and we should fail out.
-  if $os == 'Amazon' and (versioncmp($facts['os']['release']['major'], '2') != 0) {
+  # We claim to support Amazon Linux 2, which behaves like RHEL 7, support for which was dropped in
+  # BareOS 24.  If we encounter versions of Amazon Linux other than 2, where we can't just pretend
+  # it's RHEL 7, BareOS does not offer repository support, and we should fail out.
+  if $os == 'Amazon'
+  and (
+    versioncmp($facts['os']['release']['major'], '2') != 0
+    or versioncmp($release, '24') >= 0
+  ) {
     fail('Operating system has no repository support!')
   }
 
