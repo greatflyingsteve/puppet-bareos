@@ -38,7 +38,6 @@ class bareos::repository (
   }
 
   $os = $facts['os']['name']
-  $osrelease = $facts['os']['release']['full']
   $osmajrelease = $facts['os']['release']['major']
 
   if $gpg_key_fingerprint {
@@ -81,7 +80,7 @@ class bareos::repository (
           $location = "${url}RHEL_${osmajrelease}"
         }
         'Centos', 'Rocky', 'AlmaLinux': {
-          if versioncmp($release, '21') >= 0 and versioncmp($osmajrelease, '8') >= 0 {
+          if versioncmp($release, '21') >= 0 {
             $location = "${url}EL_${osmajrelease}"
           } else {
             $location = "${url}CentOS_${osmajrelease}"
@@ -122,13 +121,9 @@ class bareos::repository (
         $url = "${scheme}${address}"
       }
       if $os  == 'Ubuntu' {
-        $location = "${url}xUbuntu_${osrelease}"
+        $location = "${url}xUbuntu_${osmajrelease}"
       } else {
-        if $osmajrelease == '10' {
-          $location = "${url}Debian_${osmajrelease}"
-        } else {
-          $location = "${url}Debian_${osmajrelease}.0"
-        }
+        $location = "${url}Debian_${osmajrelease}"
       }
       if $subscription {
         # release key file is not avaiable without login and
