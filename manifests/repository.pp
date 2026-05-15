@@ -8,14 +8,14 @@
 # @param subscription
 #   Activate the (paid) subscription repo. Otherwise the opensource repos will be selected
 # @param username
-#   The major bareos release version which should be used
+#   The username is required for accessing subscription content
 # @param password
-#   The major bareos release version which should be used
+#   The password is required for accessing subscription content
 # @param https
 #   Whether https should be used in repo URL
 #
 class bareos::repository (
-  Enum['19.2', '20', '21', '22', '23'] $release             = '23',
+  Enum['19.2', '20', '21', '22', '23', '24', '25'] $release = '25',
   Optional[String[1]]                  $gpg_key_fingerprint = undef,
   Boolean                              $subscription        = false,
   Optional[String]                     $username            = undef,
