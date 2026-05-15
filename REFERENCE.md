@@ -122,7 +122,7 @@ Data type: `String`
 
 The major bareos release version which should be used
 
-Default value: `'23'`
+Default value: `'25'`
 
 ##### <a name="-bareos--repo_subscription"></a>`repo_subscription`
 
@@ -2236,11 +2236,11 @@ The following parameters are available in the `bareos::repository` class:
 
 ##### <a name="-bareos--repository--release"></a>`release`
 
-Data type: `Enum['19.2', '20', '21', '22', '23']`
+Data type: `Enum['19.2', '20', '21', '22', '23', '24', '25']`
 
 The major bareos release version which should be used
 
-Default value: `'23'`
+Default value: `'25'`
 
 ##### <a name="-bareos--repository--gpg_key_fingerprint"></a>`gpg_key_fingerprint`
 
