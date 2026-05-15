@@ -13,7 +13,7 @@ describe 'bareos::repository' do
         it { is_expected.to contain_class('bareos::repository') }
       end
 
-      case facts[:osfamily]
+      case facts[:os]['family']
       when 'RedHat'
         context 'with subscription: true, username: "test", password: "test"' do
           let(:params) do
@@ -64,23 +64,23 @@ describe 'bareos::repository' do
           end
         end
 
-        case facts[:operatingsystemmajrelease]
-        when '20'
-          context 'with subscription: true, username: "test", password: "test"' do
-            let(:params) do
-              {
-                subscription: true,
-                username: 'test',
-                password: 'test',
-              }
-            end
+        context 'with subscription: true, username: "test", password: "test"' do
+          let(:params) do
+            {
+              subscription: true,
+              username: 'test',
+              password: 'test',
+            }
+          end
 
-            it { is_expected.to compile }
+          it { is_expected.to compile }
 
-            it do
-              expect(subject).to contain_apt__source('bareos')
-                .with_location('https://test:test@download.bareos.com/bareos/release/latest/xUbuntu_20.04')
-            end
+          it do
+            os_xname = (facts[:os]['name'] == 'Ubuntu') ? 'xUbuntu' : facts[:os]['name']
+            maj_rel = facts[:os]['release']['major']
+
+            expect(subject).to contain_apt__source('bareos')
+              .with_location("https://test:test@download.bareos.com/bareos/release/23/#{os_xname}_#{maj_rel}")
           end
         end
       end
