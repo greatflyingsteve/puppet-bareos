@@ -123,6 +123,7 @@ class bareos::repository (
         release       => ['/'],
         keyring       => "/etc/apt/keyrings/${key_ring_fn}",
         source_format => 'sources',
+        types         => ['deb',],
         require       => Apt::Keyring[$key_ring_fn],
       }
       Apt::Source['bareos'] -> Package <| provider == 'apt' |>
