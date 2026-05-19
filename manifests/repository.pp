@@ -64,8 +64,8 @@ class bareos::repository (
     default => $password,
   }
 
-  case $os {
-    /(?i:redhat|centos|rocky|almalinux|fedora|virtuozzolinux|amazon)/: {
+  case $facts['os']['family'] {
+    'RedHat': {
       if $subscription and versioncmp($release, '20') <= 0 {
         case $os {
           'RedHat', 'Amazon', 'VirtuozzoLinux': { $location = "${url}RHEL_${osmajrelease}" }
@@ -95,7 +95,7 @@ class bareos::repository (
         priority => '1',
       }
     }
-    /(?i:debian|ubuntu)/: {
+    'Debian': {
       if $subscription {
         apt::auth { $dl_hostname:
           login    => $username,
